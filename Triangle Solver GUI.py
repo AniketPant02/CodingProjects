@@ -113,12 +113,13 @@ class ASAPage(tk.Frame):
         label = tk.Label(self, text = "ASA", font = LARGE_FRONT)
         label.pack(pady=10,padx=10)
         
+"""
 class SSAPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = tk.Label(self, text = "SSA", font = LARGE_FRONT)
         label.pack(pady=10,padx=10)
-
+"""
 class SASPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
