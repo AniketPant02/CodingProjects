@@ -40,10 +40,10 @@ class WelcomePage(tk.Frame):
         label = tk.Label(self, text = "Welcome to the Triangle Solver", font = LARGE_FRONT)
         label.pack(pady=10,padx=10)
 
-        AAS_Button = tk.Button(self, text = "AAS(Angle-Angle-Side)",
-                               command=lambda: controller.show_frame(AASPage))
-        AAS_Button.pack()
-        
+        AAA_Button = tk.Button(self, text = "AAA(Angle-Angle-Angle)",
+                           command=lambda: controller.show_frame(AAAPage))
+        AAA_Button.pack()
+
         AAS_Button = tk.Button(self, text = "AAS(Angle-Angle-Side)",
                                command=lambda: controller.show_frame(AASPage))
         AAS_Button.pack()
@@ -65,13 +65,40 @@ class WelcomePage(tk.Frame):
         SSS_Button.pack()
 
         label2 = tk.Label(self, text = "Thank you for using the Triangle Solver", font = SMALL_FONT)
-        label2.pack()    
+        label2.pack()
+
+"""
+def angle3():
+    angle1 = angle1_entry.get()
+    angle2 = angle2_entry.get()
+    angle3 = 180-angle2-angle1
+    if angle3+angle2+angle1 == 180:
+        angle3 = angle3
+    else:
+        angle3 = "Error"
+    statement = "Angle 3 is %s"%(angle3)
     
 class AAAPage(tk.Frame):
-    def __init___(self, parent, controller):
-        tf.Frame.__init__(self, parent)
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
         label = tk.Label(self, text = "AAA", font = LARGE_FRONT)
-
+        label.pack(pady=10,padx=10)
+        
+        angle1_label = tk.Label(self, text = "Angle 1 =")
+        angle2_label = tk.Label(self, text = "Angle 2 =")
+        angle1_entry = tk.Entry(self)
+        angle2_entry = tk.Entry(self)
+        calculate_button = tk.Button(self, text ="Calculate",
+                                     command="""Should be calling angle3()""")
+                                    
+        angle1_label.pack()
+        angle1_entry.pack()
+        angle2_label.pack()
+        angle2_entry.pack()
+        calculate_button.pack()
+"""
+    
+    
 class AASPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -105,4 +132,3 @@ class SSSPage(tk.Frame):
         
 create = CreatePT()
 create.mainloop()
-    
